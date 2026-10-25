@@ -282,286 +282,54 @@
         </div>
     </section>
 
-    <!-- LEGAL & COMPLIANCE HUB (INTERACTIVE TAB SECTION) -->
+    <!-- LEGAL & COMPLIANCE HUB (OPTION A REDIRECT SECTION) -->
     <section id="legal" class="py-20 relative border-t border-slate-800/80">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <!-- Header -->
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 inline-block mb-3">Official Legal Repository</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Terms & Data Privacy Hub</h2>
-                <p class="text-slate-300 mt-2 text-sm sm:text-base">Compliant with Republic Act No. 10173 (Philippine Data Privacy Act) & International Standards</p>
+            <div class="inline-block p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl mb-6">
+                <i class="fa-solid fa-scale-balanced text-4xl text-indigo-400"></i>
             </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Official Legal & Compliance Hub</h2>
+            <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                Access our full, up-to-date Terms of Service, Data Privacy Policy (RA 10173), Age Restrictions, and Proprietary Rights maintained by <strong>NGage Curiosity Lab</strong>.
+            </p>
 
-            <!-- Control Bar: Search & Tabs -->
-            <div class="glass-panel p-4 rounded-2xl mb-8 flex flex-col md:flex-row items-center justify-between gap-4 border border-slate-700/60">
-                <!-- Tabs -->
-                <div class="flex p-1 bg-slate-900/90 rounded-xl w-full md:w-auto border border-slate-800">
-                    <button id="tab-tos-btn" onclick="switchTab('tos')" class="flex-1 md:flex-initial px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 text-white bg-indigo-600 shadow-md">
-                        <i class="fa-solid fa-file-contract mr-2"></i> Terms of Service
-                    </button>
-                    <button id="tab-privacy-btn" onclick="switchTab('privacy')" class="flex-1 md:flex-initial px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-white">
-                        <i class="fa-solid fa-user-shield mr-2"></i> Privacy Policy & RA 10173
-                    </button>
-                </div>
+            <!-- Call to Action Button to Official Legal Hub -->
+            <a href="https://mypigeonph.github.io/legal/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="inline-flex items-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition duration-200">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>Open Official Legal Hub</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70"></i>
+            </a>
 
-                <!-- Filter / Search Input -->
-                <div class="relative w-full md:w-72">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 transform -translate-y-1/2 text-slate-400 text-xs"></i>
-                    <input type="text" id="legal-search" onkeyup="filterLegalSections()" placeholder="Search clauses (e.g. backup, email)..." class="w-full pl-9 pr-4 py-2 bg-slate-900/80 border border-slate-700/80 rounded-xl text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
-                </div>
-            </div>
+            <p class="text-xs text-slate-400 mt-6">
+                Last Updated & Verified: October 25, 2026 • © NGage Curiosity Lab
+            </p>
 
-            <!-- TAB CONTENT CONTAINER -->
-            <div class="glass-panel rounded-2xl p-6 sm:p-10 border border-slate-700/50 shadow-2xl">
-                
-                <!-- TAB 1: TERMS OF SERVICE -->
-                <div id="tos-content" class="space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
-                    <div class="border-b border-slate-800 pb-4 flex items-center justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Terms of Service and Disclaimer Agreement</h3>
-                            <p class="text-xs text-indigo-400 mt-1">Last Updated: October 10, 2026</p>
-                        </div>
-                        <a href="https://mypigeonph.github.io/legal/#terms-of-service" target="_blank" class="hidden sm:inline-flex items-center text-xs text-indigo-400 hover:underline">
-                            Direct Link <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
-                        </a>
-                    </div>
-
-                    <!-- Section 1 -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">1</span>
-                            ACCEPTANCE OF TERMS, ACCOUNT REGISTRATION & SINGLE EMAIL POLICY
-                        </h4>
-                        <ul class="list-disc pl-8 space-y-2 text-slate-300 text-sm">
-                            <li><strong>"AS-IS" & "AS-AVAILABLE" Provision:</strong> The Application is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind.</li>
-                            <li><strong>Scope of Service:</strong> My Pigeon PH is a digital administrative, high-capacity record-keeping platform designed for fanciers in the Philippines and worldwide.</li>
-                            <li><strong>Cloud Account Registration & Stored Data:</strong> User profile details—including Email, Display Name, Loft Name, User ID (`uid`), Device ID (`device_id`), Account Status/Role (`role`, `is_active`, `is_email_verified`), and Legal Consent Logs/Timestamps—are recorded in Google Firebase Firestore.</li>
-                            <li><strong>Single Email & Device Rule:</strong> To maintain account integrity and license verification, each application installation is restricted to a <strong>single registered email address per device</strong>.</li>
-                            <li><strong>Account Switching & Deletion Requirement:</strong> Switching email addresses requires performing a full account deletion first, permanently purging local loft records on the device. Users are responsible for exporting encrypted `.mypigeon` backups before switching.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Section 2 -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">2</span>
-                            SYSTEM REQUIREMENTS, DISPLAY ORIENTATION & ACCESS SECURITY
-                        </h4>
-                        <ul class="list-disc pl-8 space-y-2 text-slate-300 text-sm">
-                            <li><strong>Smartphone & Portrait Mode Restriction:</strong> The Application is designed and optimized strictly for mobile smartphones in Portrait Mode to preserve complex pedigree layouts and digital cards. Landscape orientation is disabled.</li>
-                            <li><strong>Tablet Disclaimer:</strong> The app is not optimized for tablets or foldables. Visual scaling cannot be guaranteed on unverified aspect ratios.</li>
-                            <li><strong>Device Security & Biometrics:</strong> Users are solely responsible for physical device security, local PIN codes, and OS biometric settings (`BiometricPrompt`). The developer is not liable for unauthorized access resulting from shared device usage.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Section 3 -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">3</span>
-                            SMART APP LOGIC, CONTEXT SHORTCUTS & AUTOMATED WORKFLOWS
-                        </h4>
-                        <ul class="list-disc pl-8 space-y-2 text-slate-300 text-sm">
-                            <li><strong>Context Menu Shortcuts:</strong> Long-pressing pigeon tiles triggers immediate context shortcuts (Edit, Health Log, OLR Enrollment, Pedigree, Delete). Actions take effect immediately on local databases.</li>
-                            <li><strong>Automated Sales & Ledger Credits:</strong> Updating a bird's status to "Sold" automatically logs a sales credit into the Loft Financial Tracker with optional buyer details.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Section 4 -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">4</span>
-                            PEDIGREE, GENETIC COI & MISREPRESENTATION DISCLAIMER
-                        </h4>
-                        <p class="text-sm text-slate-300 pl-8">All pedigree records, ring entries, QR codes, and Coefficient of Inbreeding (COI) reports are user-generated. The developer does not verify or certify genetic accuracy or ownership for third-party commercial transactions or races.</p>
-                    </div>
-
-                    <!-- Section 5 -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">5</span>
-                            VETERINARY & HEALTH DISCLAIMER
-                        </h4>
-                        <p class="text-sm text-slate-300 pl-8">Health modules, vaccination trackers, and egg incubation alarms are administrative tools and do not substitute for licensed veterinary advice. Users assume all risk regarding treatments or foster transfers.</p>
-                    </div>
-
-                    <!-- Section 6 & 7 -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">6</span>
-                            DATA PORTABILITY & AES-256 BACKUPS
-                        </h4>
-                        <p class="text-sm text-slate-300 pl-8">All pigeon records stay strictly local on device storage. Users are responsible for exporting encrypted `.mypigeon` backups. The developer cannot recover passwords for lost backup files.</p>
-                    </div>
-                </div>
-
-                <!-- TAB 2: PRIVACY POLICY & RA 10173 -->
-                <div id="privacy-content" class="hidden space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
-                    <div class="border-b border-slate-800 pb-4 flex items-center justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Privacy Policy & RA 10173 Compliance</h3>
-                            <p class="text-xs text-indigo-400 mt-1">Republic Act No. 10173 (Philippine Data Privacy Act of 2012)</p>
-                        </div>
-                        <a href="https://mypigeonph.github.io/legal/#privacy-policy" target="_blank" class="hidden sm:inline-flex items-center text-xs text-indigo-400 hover:underline">
-                            Direct Link <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
-                        </a>
-                    </div>
-
-                    <!-- Section 1 -->
-                    <div class="legal-clause space-y-3">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <i class="fa-solid fa-database text-xs text-cyan-400"></i>
-                            1. INFORMATION WE COLLECT AND PROCESS
-                        </h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4">
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                                <h5 class="font-semibold text-white text-xs uppercase tracking-wider text-indigo-400 mb-2">Cloud Details (Firestore)</h5>
-                                <ul class="text-xs space-y-1.5 text-slate-300">
-                                    <li>&bull; `display_name`, `email`, `loft_name`</li>
-                                    <li>&bull; `uid`, `device_id` (License verification)</li>
-                                    <li>&bull; `is_active`, `is_email_verified`, `role`</li>
-                                    <li>&bull; Legal consent flags & timestamps</li>
-                                </ul>
-                            </div>
-                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                                <h5 class="font-semibold text-white text-xs uppercase tracking-wider text-emerald-400 mb-2">Local Records (100% On-Device)</h5>
-                                <ul class="text-xs space-y-1.5 text-slate-300">
-                                    <li>&bull; Bird profiles, 6-Gen pedigrees & photos</li>
-                                    <li>&bull; Hatching trackers & foster records</li>
-                                    <li>&bull; Financial ledgers & monthly records</li>
-                                    <li>&bull; Health logs & local alarm settings</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section 2: Biometrics -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <i class="fa-solid fa-fingerprint text-xs text-purple-400"></i>
-                            2. LOCAL BIOMETRIC & PIN SECURITY
-                        </h4>
-                        <p class="text-sm text-slate-300 pl-6">Biometric authentication (fingerprint/face unlock) is executed entirely by Android's hardware `BiometricPrompt`. My Pigeon PH <strong>never</strong> collects, transmits, or stores biometric data or facial templates.</p>
-                    </div>
-
-                    <!-- Section 3: Erasure & Single Email -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <i class="fa-solid fa-trash-can text-xs text-rose-400"></i>
-                            3. ACCOUNT DELETION & ERASURE POLICY
-                        </h4>
-                        <p class="text-sm text-slate-300 pl-6">Executing an account deletion permanently purges cloud records from Google Firestore and executes an immediate, non-recoverable local database wipe on your smartphone.</p>
-                    </div>
-
-                    <!-- Section 4: International Users -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <i class="fa-solid fa-globe text-xs text-cyan-400"></i>
-                            4. INTERNATIONAL USERS & CROSS-BORDER DATA PRIVACY
-                        </h4>
-                        <p class="text-sm text-slate-300 pl-6">While operated out of the Philippines, our offline-first architecture complies with global privacy standards (including GDPR and CCPA) by keeping all sensitive loft entries exclusively on local user hardware.</p>
-                    </div>
-
-                    <!-- Section 5: Data Subject Rights -->
-                    <div class="legal-clause space-y-2">
-                        <h4 class="text-base font-bold text-white text-indigo-300 flex items-center gap-2">
-                            <i class="fa-solid fa-scale-balanced text-xs text-amber-400"></i>
-                            5. DATA SUBJECT RIGHTS (RA 10173)
-                        </h4>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pl-6 pt-2 text-center text-xs">
-                            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-300 font-semibold">Right to Info</div>
-                            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-300 font-semibold">Right to Access</div>
-                            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-300 font-semibold">Right to Erasure</div>
-                            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-300 font-semibold">Data Portability</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 
-    <!-- SUPPORT & CONTACT SECTION -->
-    <section id="contact" class="py-16 border-t border-slate-800/80">
-        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Questions or Technical Support?</h2>
-            <p class="text-slate-300 text-sm max-w-xl mx-auto">Need assistance with your local backups, license verification, or data privacy rights? Reach out directly to our developer team.</p>
-            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-xl glass-card border border-indigo-500/30 text-indigo-300">
-                <i class="fa-solid fa-envelope text-indigo-400"></i>
-                <a href="mailto:mypigeonph@gmail.com" class="font-semibold text-white hover:underline">mypigeonph@gmail.com</a>
-            </div>
+    <!-- SUPPORT / CONTACT SECTION -->
+    <section id="contact" class="py-20 relative border-t border-slate-800/60 bg-slate-950/40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Need Support or Assistance?</h2>
+            <p class="text-slate-400 mb-6 text-sm sm:text-base">For account inquiries, data privacy requests under RA 10173, or application assistance, contact developer support.</p>
+            <a href="mailto:mypigeonph@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 text-indigo-300 hover:text-white hover:border-indigo-500 transition-colors">
+                <i class="fa-solid fa-envelope"></i> mypigeonph@gmail.com
+            </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 bg-slate-950 border-t border-slate-800/80 text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-dove text-indigo-500"></i>
-                <span class="font-bold text-slate-400">My Pigeon PH</span>
-                <span>&bull; Virtual Loft & Breeding Management</span>
-            </div>
-            <div>
-                Official Legal Portal: 
-                <a href="https://mypigeonph.github.io/legal/" target="_blank" class="text-indigo-400 hover:underline">mypigeonph.github.io/legal/</a>
-            </div>
-            <div>
-                &copy; 2026 My Pigeon PH. All rights reserved.
-            </div>
+    <footer class="py-12 border-t border-slate-800/80 bg-slate-950 text-center text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <p>&copy; 2026 NGage Curiosity Lab. All Rights Reserved. Built for My Pigeon PH.</p>
+            <p>Protected by international copyright laws and proprietary digital infrastructure.</p>
         </div>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT -->
-    <script>
-        // Tab Switcher
-        function switchTab(tab) {
-            const tosBtn = document.getElementById('tab-tos-btn');
-            const privacyBtn = document.getElementById('tab-privacy-btn');
-            const tosContent = document.getElementById('tos-content');
-            const privacyContent = document.getElementById('privacy-content');
-
-            if (tab === 'tos') {
-                tosBtn.className = "flex-1 md:flex-initial px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 text-white bg-indigo-600 shadow-md";
-                privacyBtn.className = "flex-1 md:flex-initial px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-white";
-                tosContent.classList.remove('hidden');
-                privacyContent.classList.add('hidden');
-            } else {
-                privacyBtn.className = "flex-1 md:flex-initial px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 text-white bg-indigo-600 shadow-md";
-                tosBtn.className = "flex-1 md:flex-initial px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 text-slate-400 hover:text-white";
-                privacyContent.classList.remove('hidden');
-                tosContent.classList.add('hidden');
-            }
-        }
-
-        // Search/Filter Legal Clauses
-        function filterLegalSections() {
-            const query = document.getElementById('legal-search').value.toLowerCase();
-            const clauses = document.querySelectorAll('.legal-clause');
-
-            clauses.forEach(clause => {
-                const text = clause.innerText.toLowerCase();
-                if (text.includes(query)) {
-                    clause.style.display = "";
-                } else {
-                    clause.style.display = "none";
-                }
-            });
-        }
-
-        // Mobile Menu Drawer Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
 </body>
 </html>
